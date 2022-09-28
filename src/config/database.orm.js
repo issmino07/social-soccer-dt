@@ -16,7 +16,10 @@ mysql.createConnection({
 
 const playersModel = require('../models/players.model');
 const dtsModel = require('../models/dts.model');
-
+const campsModel = require('../models/camps.model');
+const leagueBarrelsModel = require('../models/leagueBarrels.model');
+const matchsModel = require('../models/matchs.model');
+const teamsModel = require('../models/teams.model');
 
 const sequelize = new Sequelize(
   'social_soccer_dt',
@@ -49,13 +52,20 @@ sequelize.sync({ force: false })
 
 const players = playersModel(sequelize, Sequelize);
 const dts = dtsModel(sequelize, Sequelize);
-
-
+const leagueBarrels = leagueBarrelsModel(sequelize, Sequelize);
+const matchs = matchsModel(sequelize, Sequelize);
+const teams = teamsModel(sequelize, Sequelize);
+const camps = campsModel(sequelize, Sequelize);
 
 //Relaciones 
 
 
 module.exports = {
   players,
-  dts
+  dts,
+  camps,
+  leagueBarrels,
+  matchs,
+  teams
+
 }

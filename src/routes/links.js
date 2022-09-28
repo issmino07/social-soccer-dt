@@ -22,10 +22,10 @@ router.get('/add-game' , (req, res) => {
 router.post('/dt', async (req, res) => {
     const { nombre_DT, equipo_DT, edad_DT, valoracion_DT } = req.body;
     const newLink = {
-        nombre_DT,
-        equipo_DT,
-        edad_DT,
-        valoracion_DT 
+        name_DT,
+        team_DT,
+        age_DT,
+        valoration_DT 
 
     };
     
@@ -53,10 +53,10 @@ router.post('/edit/:id', async (req, res) => {
     const { id } = req.params;
     const { nombre_DT, equipo_DT, edad_DT, valoracion_DT } = req.body;
     const newLink = {
-        nombre_DT,
-        equipo_DT,
-        edad_DT,
-        valoracion_DT
+        name_DT,
+        team_DT,
+        age_DT,
+        valoration_DT
     };
     await pool.query('UPDATE dt set ? WHERE id = ?', [newLink, id]);
     req.flash('success', 'EDITADO CORRECTAMENTE')
@@ -93,11 +93,11 @@ router.get('/delete-player/:id', async (req, res) => {
 });
 router.post('/edit-player/:id', async (req, res) => {
     const { id } = req.params;
-    const { name_Player, surname_Player, age_Player, player_Valuation } = req.body;
+    const { name_player, surname_player, age_player, player_Valuation } = req.body;
     const newLink = {
-        name_Player,
-        surname_Player,
-        age_Player,
+        name_player,
+        surname_player,
+        age_player,
         player_Valuation
     };
     await pool.query('UPDATE player set ? WHERE id = ?', [newLink, id]);
@@ -107,11 +107,11 @@ router.post('/edit-player/:id', async (req, res) => {
 });
 //PARTIDO
 router.post('/post-game', async (req, res) => {
-    const { place_Match, match_time, Date_match } = req.body;
+    const { place_game, game_time, Date_game } = req.body;
     const newLink = {
-        place_Match,
-        match_time,
-        Date_match
+        place_game,
+        game_time,
+        Date_game
 
     };
     
