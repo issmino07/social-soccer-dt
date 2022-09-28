@@ -9,13 +9,12 @@ CREATE TABLE dt(
     age_DT VARCHAR(100) NOT NULL,
     valoration_DT VARCHAR(100) NOT NULL
 );
-
-CREATE TABLE Liga_barrial(
+CREATE TABLE Player(
     id SERIAL NOT NULL, 
-    liga_barrial VARCHAR(16) NOT NULL,
-    nombre_liga_barrial VARCHAR(60) NOT NULL,
-    ubicacion_liga_barrial VARCHAR(100) NOT NULL,
-    tipo_liga_barrial VARCHAR(100) NOT NULL
+    name_Player VARCHAR(16) NOT NULL,
+    surname_Player VARCHAR(60) NOT NULL,
+    age_Player VARCHAR(100) NOT NULL,
+    player_Valuation VARCHAR(100) NOT NULL
 );
 CREATE TABLE Match(
     id SERIAL NOT NULL, 
@@ -24,24 +23,22 @@ CREATE TABLE Match(
     Date_match VARCHAR(60) NOT NULL
     
 );
-CREATE TABLE Equipment(
+CREATE TABLE League_barrels(
     id SERIAL NOT NULL, 
-    name_Equipment VARCHAR(16) NOT NULL,
+    league_barrels VARCHAR(16) NOT NULL,
+    name_league_barrels VARCHAR(60) NOT NULL,
+    location_league_barrels VARCHAR(100) NOT NULL,
+    type_league_barrels VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Team(
+    id SERIAL NOT NULL, 
+    name_team VARCHAR(16) NOT NULL,
     league_team VARCHAR(60) NOT NULL
 );
-CREATE TABLE Player(
+
+CREATE TABLE camp(
     id SERIAL NOT NULL, 
-    name_Player VARCHAR(16) NOT NULL,
-    surname_Player VARCHAR(60) NOT NULL,
-    age_Player VARCHAR(100) NOT NULL,
-    player_Valuation VARCHAR(100) NOT NULL
-);
-CREATE TABLE cancha(
-    id SERIAL NOT NULL, 
-    court_number VARCHAR(100) NOT NULL
+    camp_number VARCHAR(100) NOT NULL
     
 );
-
-
-
-

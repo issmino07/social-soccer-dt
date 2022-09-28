@@ -16,6 +16,7 @@ mysql.createConnection({
 
 const playersModel = require('../models/players.model');
 const dtsModel = require('../models/dts.model');
+const matchsModel = require('../models/matchs.model');
 
 
 const sequelize = new Sequelize(
@@ -49,6 +50,7 @@ sequelize.sync({ force: false })
 
 const players = playersModel(sequelize, Sequelize);
 const dts = dtsModel(sequelize, Sequelize);
+const matchs = matchsModel(sequelize, Sequelize);
 
 
 
@@ -57,5 +59,6 @@ const dts = dtsModel(sequelize, Sequelize);
 
 module.exports = {
   players,
-  dts
+  dts,
+  matchs
 }
