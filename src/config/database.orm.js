@@ -16,8 +16,15 @@ mysql.createConnection({
 
 const playersModel = require('../models/players.model');
 const dtsModel = require('../models/dts.model');
+<<<<<<< HEAD
 const matchsModel = require('../models/matchs.model');
 
+=======
+const campsModel = require('../models/camps.model');
+const leagueBarrelsModel = require('../models/leagueBarrels.model');
+const matchsModel = require('../models/matchs.model');
+const teamsModel = require('../models/teams.model');
+>>>>>>> 126e3b0ec6ee67585774fbf6ef8c60fe3235210d
 
 const sequelize = new Sequelize(
   'social_soccer_dt',
@@ -50,9 +57,16 @@ sequelize.sync({ force: false })
 
 const players = playersModel(sequelize, Sequelize);
 const dts = dtsModel(sequelize, Sequelize);
+<<<<<<< HEAD
 const matchs = matchsModel(sequelize, Sequelize);
 
 
+=======
+const leagueBarrels = leagueBarrelsModel(sequelize, Sequelize);
+const matchs = matchsModel(sequelize, Sequelize);
+const teams = teamsModel(sequelize, Sequelize);
+const camps = campsModel(sequelize, Sequelize);
+>>>>>>> 126e3b0ec6ee67585774fbf6ef8c60fe3235210d
 
 //Relaciones 
 
@@ -60,5 +74,13 @@ const matchs = matchsModel(sequelize, Sequelize);
 module.exports = {
   players,
   dts,
+<<<<<<< HEAD
   matchs
+=======
+  camps,
+  leagueBarrels,
+  matchs,
+  teams
+
+>>>>>>> 126e3b0ec6ee67585774fbf6ef8c60fe3235210d
 }

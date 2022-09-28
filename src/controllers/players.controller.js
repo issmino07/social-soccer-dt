@@ -5,6 +5,6 @@ const Players={}
 Players.getListPlayers = async (req, res) => {
     const player = await pool.query('SELECT *FROM player');
     console.log(player)
-    res.render('links/list-player', { player });
+    res.render('links/list-player', { Players });
 };
 module.exports=Players;
