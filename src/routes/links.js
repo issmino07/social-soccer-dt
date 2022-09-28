@@ -30,7 +30,7 @@ router.post('/dt', async (req, res) => {
     };
     
     await pool.query('INSERT INTO dt set ?', [newLink]);
-    req.flash('success', 'CREADO CORRECTAMENTE');
+    req.flash('success', 'DT CREADO CORRECTAMENTE');
     res.redirect('/links')
 });
 router.get('/', async (req, res) => {
@@ -41,7 +41,7 @@ router.get('/', async (req, res) => {
 router.get('/delete/:id', async (req, res) => {
     const { id } = req.params;
     await pool.query('DELETE FROM dt WHERE ID = ?', [id]);
-    req.flash('success', 'ELIMINADO CORRECTAMENTE');
+    req.flash('success', 'DT ELIMINADO CORRECTAMENTE');
     res.redirect('/links');
  });
  router.get('/edit/:id', async (req, res) => {
@@ -122,11 +122,7 @@ router.post('/post-game', async (req, res) => {
 
 
 
-router.get('/list-game', async (req, res) => {
-    const game = await pool.query('SELECT *FROM game');
-    console.log(game)
-    res.render('links/list-game', { game });
-})
+router.get('/list-game', playersController.getListPlayers);
 
 
 
