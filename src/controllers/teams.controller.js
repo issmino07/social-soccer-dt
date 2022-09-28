@@ -1,10 +1,8 @@
 const pool = require("../config/database");
 
-const teams={}
+const Teams={}
 
-Players.getListPlayers = async (req, res) => {
-    const player = await pool.query('SELECT *FROM dt');
-    console.log(player)
-    res.render('links/list-player', { dt });
+Teams.getListTeams = async (req, res) => {
+    
 };
-module.exports=teams;
+module.exports=Teams;
