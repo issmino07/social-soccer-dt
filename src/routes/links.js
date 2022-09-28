@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const playersController = require('../controllers/players.controller');
+const dtsController = require('../controllers/dts.controller');
 
 const pool = require('../config/database')
 //DIRECTOR TECNICO//
@@ -19,50 +20,7 @@ router.get('/add-game' , (req, res) => {
     
 //DIRECTOR TECNICO
 });
-router.post('/dt', async (req, res) => {
-    const { nombre_DT, equipo_DT, edad_DT, valoracion_DT } = req.body;
-    const newLink = {
-        name_DT,
-        team_DT,
-        age_DT,
-        valoration_DT 
 
-    };
-    
-    await pool.query('INSERT INTO dt set ?', [newLink]);
-    req.flash('success', 'DT CREADO CORRECTAMENTE');
-    res.redirect('/links')
-});
-router.get('/', async (req, res) => {
-    const dt = await pool.query('SELECT *FROM dt');
-    console.log(dt)
-    res.render('links/list', { dt });
-})
-router.get('/delete/:id', async (req, res) => {
-    const { id } = req.params;
-    await pool.query('DELETE FROM dt WHERE ID = ?', [id]);
-    req.flash('success', 'DT ELIMINADO CORRECTAMENTE');
-    res.redirect('/links');
- });
- router.get('/edit/:id', async (req, res) => {
-    const { id } = req.params;
-    const dt = await pool.query('SELECT * FROM dt WHERE id = ?', [id]);
-    res.render('links/edit', {dt: dt[0]});
-});
-router.post('/edit/:id', async (req, res) => {
-    const { id } = req.params;
-    const { nombre_DT, equipo_DT, edad_DT, valoracion_DT } = req.body;
-    const newLink = {
-        name_DT,
-        team_DT,
-        age_DT,
-        valoration_DT
-    };
-    await pool.query('UPDATE dt set ? WHERE id = ?', [newLink, id]);
-    req.flash('success', 'EDITADO CORRECTAMENTE')
-    res.redirect('/links');
-    
-});
 //JUGADOR
 router.post('/post-player', async (req, res) => {
     const { name_Player, surname_Player, age_Player, player_Valuation } = req.body;
