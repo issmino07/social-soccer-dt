@@ -1,5 +1,5 @@
-const matchs =(sequelize, type) =>{
-    return sequelize.define('matchs', {
+const matches =(sequelize, type) =>{
+    return sequelize.define('matches', {
         id: {
             type: type.INTEGER,
             primaryKey: true,
@@ -8,24 +8,14 @@ const matchs =(sequelize, type) =>{
 
         place_Match: type.STRING, 
         match_time: type.STRING,
-<<<<<<< HEAD
-        Date_match: type.STRING, 
-
-        createDts:{
-=======
         Date_match: type.STRING,
 
-        createMatchs:{
->>>>>>> 126e3b0ec6ee67585774fbf6ef8c60fe3235210d
+        createMatches:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-<<<<<<< HEAD
-        updateDts:{
-=======
-        updateMatchs:{
->>>>>>> 126e3b0ec6ee67585774fbf6ef8c60fe3235210d
+        updateMatches:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -35,4 +25,4 @@ const matchs =(sequelize, type) =>{
     })
 }
 
-module.exports = matchs
+module.exports = matches
