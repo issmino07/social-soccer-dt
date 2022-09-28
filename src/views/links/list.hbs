@@ -1,0 +1,31 @@
+<div class="container p-4">
+  <center><h3>DIRECTOR TECNICO</h3>
+    <div class="row">
+   
+    {{#each dt}}
+      <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+               
+                <h3 class="card text-uppercase" style="color: blue;">
+                    {{nombre_DT}}
+                </h3>
+                <p class="m-2">{{equipo_DT}}</p>
+                <p class="m-2">{{edad_DT}}</p>
+                <p class="m-2">{{valoracion_DT}}</p>
+                <a href="/links/delete/{{id}}" class="btn btn-danger">Delete Link</a>
+                <a href="/links/edit/{{id}}" class="btn btn-secondary">Edit</a>
+               
+            </div>
+        </div>
+      </div>
+      {{else}}
+      <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center">
+          <p>There are not links save yet.</p>
+          <a href="/links/add">Create One!</a>
+        </div>
+      </div>
+    {{/each}}
+    </div>
+</div>

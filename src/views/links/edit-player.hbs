@@ -1,0 +1,34 @@
+<div class="container p-4">
+    <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card ">
+       <div class="card-body">
+        <form action="/links/edit-player/{{player.id}}" method="POST">
+           <div class="form-group">
+            <label for="nombre">NOMBRE:</label>
+             <input type="text" value="{{player.name_Player}}" class="form-control" name="name_Player" placeholder="name_Player" autofocus>
+           </div>
+           <div class="form-group">
+            <label for="equipo">APELLIDO:</label>
+            <input type="text" value="{{player.surname_Player}}" class="form-control" name="surname_Player" placeholder="surname_Player" autofocus>
+           </div>
+           <div class="form-group">
+            <label for="edad">EDAD:</label>
+           <input type="text" value="{{player.age_Player}}" class="form-control" name="age_Player" placeholder="age_Player" autofocus>
+           </div>
+           <div class="form-group">
+            <div class="form-group">
+              <label for="valoracion">VALORACION:</label>
+             <input type="text" value="{{player.player_Valuation}}" class="form-control" name="player_Valuation" placeholder="player_Valuation" autofocus>
+           </div>
+            <button class="btn btn-success btn-block">
+              save
+            </button>
+           </div>
+        </form>
+       </div>
+      </div>
+    </div>
+  </div>
+   
+</div>

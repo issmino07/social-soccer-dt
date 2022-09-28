@@ -1,0 +1,34 @@
+<div class="container p-4">
+    <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card ">
+       <div class="card-body">
+        <form action="/links/edit/{{dt.id}}" method="POST">
+           <div class="form-group">
+            <label for="nombre">NOMBRE:</label>
+             <input type="text" value="{{dt.nombre_DT}}" class="form-control" name="nombre_DT" placeholder="nombre DT" autofocus>
+           </div>
+           <div class="form-group">
+            <label for="equipo">EQUIPO:</label>
+            <input type="text" value="{{dt.equipo_DT}}" class="form-control" name="equipo_DT" placeholder="equipo DT" autofocus>
+           </div>
+           <div class="form-group">
+            <label for="edad">EDAD:</label>
+           <input type="text" value="{{dt.edad_DT}}" class="form-control" name="edad_DT" placeholder="edad DT" autofocus>
+           </div>
+           <div class="form-group">
+            <div class="form-group">
+              <label for="valoracion">VALORACION:</label>
+             <input type="text" value="{{dt.valoracion_DT}}" class="form-control" name="valoracion_DT" placeholder="valoracion DT" autofocus>
+           </div>
+            <button class="btn btn-success btn-block">
+              save
+            </button>
+           </div>
+        </form>
+       </div>
+      </div>
+    </div>
+  </div>
+   
+</div>

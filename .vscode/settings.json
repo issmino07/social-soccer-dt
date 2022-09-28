@@ -1,0 +1,30 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3500,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "username": "root",
+            "name": "database_links",
+            "database": "5432"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "askForPassword": true,
+            "driver": "MySQL",
+            "name": "database_links",
+            "database": "5432",
+            "username": "root"
+        }
+    ]
+}
