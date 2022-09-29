@@ -4,65 +4,15 @@ const playersController = require('../controllers/players.controller');
 const dtsController = require('../controllers/dts.controller');
 
 const pool = require('../config/database')
-//DIRECTOR TECNICO//
-router.get('/add' , (req, res) => {
-    res.render('links/dt');
-    
- //JUGADOR//   
-});
-router.get('/add-player' , (req, res) => {
-    res.render('links/player');
-    
-//PARTIDO
-});
+
 router.get('/add-game' , (req, res) => {
     res.render('links/game');
     
-//DIRECTOR TECNICO
+
 });
 
-//JUGADOR
-router.post('/post-player', async (req, res) => {
-    const { name_Player, surname_Player, age_Player, player_Valuation } = req.body;
-    const newLink = {
-        name_Player,
-        surname_Player,
-        age_Player,
-        player_Valuation 
 
-    };
-    
-    await pool.query('INSERT INTO player set ?', [newLink]);
-    req.flash('success', 'PLAYER CREADO CORRECTAMENTE');
-    res.redirect('/links/list-player')
-});
-router.get('/list-player', playersController.getListPlayers);
 
-router.get('/delete-player/:id', async (req, res) => {
-    const { id } = req.params;
-    await pool.query('DELETE FROM player WHERE ID = ?', [id]);
-    req.flash('success', 'PLAYER ELIMINADO CORRECTAMENTE');
-    res.redirect('/links/list-player');
- });
- router.get('/edit-player/:id', async (req, res) => {
-    const { id } = req.params;
-    const player = await pool.query('SELECT * FROM player WHERE id = ?', [id]);
-    res.render('links/edit-player', {player: player[0]});
-});
-router.post('/edit-player/:id', async (req, res) => {
-    const { id } = req.params;
-    const { name_player, surname_player, age_player, player_Valuation } = req.body;
-    const newLink = {
-        name_player,
-        surname_player,
-        age_player,
-        player_Valuation
-    };
-    await pool.query('UPDATE player set ? WHERE id = ?', [newLink, id]);
-    req.flash('success', 'PLAYER EDITADO CORRECTAMENTE')
-    res.redirect('/links/list-player');
-    
-});
 //PARTIDO
 router.post('/post-game', async (req, res) => {
     const { place_game, game_time, Date_game } = req.body;
