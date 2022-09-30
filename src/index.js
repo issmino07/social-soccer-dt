@@ -48,6 +48,10 @@ app.use(require('./routes'));
 app.use(require('./routes/authentication'));
 app.use('/dts',require('./routes/dts.routes'));
 app.use('/players',require('./routes/players.routes'));
+app.use('/matches',require('./routes/matches.routes'));
+app.use('/leagueBarrels',require('./routes/leagueBarrels.routes'));
+app.use('/teams',require('./routes/teams.routes'));
+app.use('/camps',require('./routes/camps.routes'));
 
 
 

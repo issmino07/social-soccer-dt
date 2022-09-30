@@ -1,0 +1,31 @@
+<div class="container p-4">
+  <center><h3>LIGA BARRIAL</h3>
+    <div class="row">
+        
+    {{#each leagueBarrels}}
+      <div class="col-md-3">
+        <div class="card text-center">
+            <div class="card-body">
+               
+                <h3 class="card text-uppercase" style="color: blue;">
+                    {{league_barrels}}
+                </h3>
+                <p class="m-2">{{name_league_barrels}}</p>
+                <p class="m-2">{{location_league_barrels}}</p>
+                <p class="m-2">{{type_league_barrels}}</p>
+                <a href="/leagueBarrels/delete-leagueBarrel/{{id}}" class="btn btn-danger">Delete</a>
+                <a href="/leagueBarrels/edit-leagueBarrel/{{id}}" class="btn btn-secondary">Edit</a>
+               
+            </div>
+        </div>
+      </div>
+      {{else}}
+      <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center">
+          <p>There are not links save yet.</p>
+          <a href="/leagueBarrels/add-leagueBarrel">Create One!</a>
+        </div>
+      </div>
+    {{/each}}
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container p-4">
+    <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card ">
+       <div class="card-body">
+        <form action="/camps/edit-camp/{{camp.id}}" method="POST">
+           <div class="form-group">
+            <label for="N° Campo">N° CAMPO:</label>
+             <input type="number" value="{{camp.camp.number}}" class="form-control" name="camp_number" placeholder="N° Campo" autofocus>
+           </div>
+           
+            <button class="btn btn-success btn-block">
+              save
+            </button>
+           </div>
+        </form>
+       </div>
+      </div>
+    </div>
+  </div>
+   
+</div>

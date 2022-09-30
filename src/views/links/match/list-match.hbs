@@ -1,20 +1,19 @@
 <div class="container p-4">
-  <center><h3>JUGADOR</h3>
+  <center><h3>GAME</h3>
     <div class="row">
         
-    {{#each Players}}
+    {{#each match}}
       <div class="col-md-3">
         <div class="card text-center">
             <div class="card-body">
                
                 <h3 class="card text-uppercase" style="color: blue;">
-                    {{name_Player}}
+                    {{place_Match}}
                 </h3>
-                <p class="m-2">{{surname_Player}}</p>
-                <p class="m-2">{{age_Player}}</p>
-                <p class="m-2">{{player_Valuation}}</p>
-                <a href="/players/delete-player/{{id}}" class="btn btn-danger">Delete</a>
-                <a href="/players/edit-player/{{id}}" class="btn btn-secondary">Edit</a>
+                <p class="m-2">{{match_time}}</p>
+                <p class="m-2">{{Date_match}}</p>
+                <a href="/matches/delete-match/{{id}}" class="btn btn-danger">Delete</a>
+                <a href="/matches/edit-match/{{id}}" class="btn btn-secondary">Edit</a>
                
             </div>
         </div>
@@ -23,7 +22,7 @@
       <div class="col-md-4 mx-auto">
         <div class="card card-body text-center">
           <p>There are not links save yet.</p>
-          <a href="/players/add-player">Create One!</a>
+          <a href="/matches/add-match">Create One!</a>
         </div>
       </div>
     {{/each}}

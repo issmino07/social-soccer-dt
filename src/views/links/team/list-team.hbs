@@ -1,19 +1,18 @@
 <div class="container p-4">
-  <center><h3>GAME</h3>
+  <center><h3>EQUIPO</h3>
     <div class="row">
         
-    {{#each game}}
+    {{#each team}}
       <div class="col-md-3">
         <div class="card text-center">
             <div class="card-body">
                
                 <h3 class="card text-uppercase" style="color: blue;">
-                    {{place_Match}}
+                    {{name_team}}
                 </h3>
-                <p class="m-2">{{match_time}}</p>
-                <p class="m-2">{{Date_match}}</p>
-                <a href="/links/delete-game/{{id}}" class="btn btn-danger">Delete</a>
-                <a href="/links/edit-game/{{id}}" class="btn btn-secondary">Edit</a>
+                <p class="m-2">{{league_team}}</p>
+                <a href="/teams/delete-team/{{id}}" class="btn btn-danger">Delete</a>
+                <a href="/teams/edit-team/{{id}}" class="btn btn-secondary">Edit</a>
                
             </div>
         </div>
@@ -22,7 +21,7 @@
       <div class="col-md-4 mx-auto">
         <div class="card card-body text-center">
           <p>There are not links save yet.</p>
-          <a href="/links/add-game">Create One!</a>
+          <a href="/teams/add-team">Create One!</a>
         </div>
       </div>
     {{/each}}
