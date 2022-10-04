@@ -1,26 +1,17 @@
-<div class="container p-4">
-    <div class="row">
-    <div class="col-md-4 mx-auto">
-      <div class="card ">
-       <div class="card-body">
-        <form action="/teams/edit-team/{{team.id}}" method="POST">
-           <div class="form-group">
-            <label for="nombre">NOMBRE:</label>
-             <input type="text" value="{{team.name_team}}" class="form-control" name="name_team" placeholder="Nombre Equipo" autofocus>
-           </div>
-           <div class="form-group">
-            <label for="equipo">APELLIDO:</label>
-            <input type="text" value="{{team.league_team}}" class="form-control" name="league_team" placeholder="Liga Equipo" autofocus>
-           </div>
-           
-            <button class="btn btn-success btn-block">
-              save
-            </button>
-           </div>
-        </form>
-       </div>
-      </div>
-    </div>
+
+  <link rel="stylesheet" href="/css/dt.css">
+
+  
+  <form action="/teams/edit-team/{{team.id}}" method="POST">
+  <div class="form-body">
+     <img src="https://phantom-marca.unidadeditorial.es/310322f379684afd3c63dffff23f81ce/resize/1320/f/jpg/assets/multimedia/imagenes/2021/04/13/16183240507790.jpg" alt="user-login">
+     <p class="text">EDITAR EQUIPO</p>
+     <form class="login-form">
+      <input type="text" value="{{team.name_team}}" class="form-control" name="name_team" placeholder="Nombre De Equipo" autofocus>
+      <input type="text" value="{{team.league_team}}" class="form-control" name="league_team" placeholder="Liga Equipo" autofocus>
+     
+      
+      <button>EDITAR</button>
+      </form>
+     </form>
   </div>
-   
-</div>

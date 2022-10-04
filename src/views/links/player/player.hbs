@@ -1,34 +1,17 @@
-<div class="container p-4">
-    <div class="row">
-    <div class="col-md-4 mx-auto">
-      <div class="card ">
-       <div class="card-body">
-        <form action="/players/post-player" method="POST">
-           <div class="form-group">
-            <label for="nombre">NOMBRE:</label>
-             <input type="text" class="form-control" name="name_Player" placeholder="name Player" autofocus>
-           </div>
-           <div class="form-group">
-            <label for="equipo">EQUIPO:</label>
-            <input type="text" class="form-control" name="surname_Player" placeholder="surname Player" autofocus>
-           </div>
-           <div class="form-group">
-            <label for="edad">EDAD:</label>
-           <input type="text" class="form-control" name="age_Player" placeholder="age Player" autofocus>
-           </div>
-           <div class="form-group">
-            <div class="form-group">
-              <label for="valoracion">VALORACION:</label>
-             <input type="text" class="form-control" name="player_Valuation" placeholder="player Valuation" autofocus>
-           </div>
-            <button class="btn btn-success btn-block">
-              save
-            </button>
-           </div>
-        </form>
-       </div>
-      </div>
-    </div>
+
+  <link rel="stylesheet" href="/css/dt.css">
+
+  
+  <form action="/players/post-player" method="POST">
+  <div class="form-body">
+     <img src="https://www.eluniverso.com/resizer/ybZzeBd1qVvonYAwP9wQ2hAh71c=/710x660/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/Y2QP7TEWTJBC3PVMZZ5ZYYXJX4.jpg" alt="user-login">
+     <p class="text">JUGADOR</p>
+     <form class="login-form">
+      <input type="text" class="form-control" name="name_Player" placeholder="Nombre Jugador" autofocus>
+      <input type="text" class="form-control" name="surname_Player" placeholder="Apellido Jugador" autofocus>
+      <input type="text" class="form-control" name="age_Player" placeholder="Edad Jugador" autofocus>
+       <input type="number" class="form-control" name="player_Valuation" placeholder="valoracion del 1 al 10" autofocus>
+      <button>AGREGAR</button>
+      </form>
+     </form>
   </div>
-   
-</div>

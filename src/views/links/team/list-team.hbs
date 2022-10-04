@@ -1,28 +1,32 @@
-<div class="container p-4">
-  <center><h3>EQUIPO</h3>
-    <div class="row">
-        
+
+  <link rel="stylesheet" href="/css/list.css">
+
+  <center><h3>SOCIAL-SOCCER</h3></center>
+
+  
+   
     {{#each team}}
-      <div class="col-md-3">
-        <div class="card text-center">
-            <div class="card-body">
-               
-                <h3 class="card text-uppercase" style="color: blue;">
-                    {{name_team}}
-                </h3>
-                <p class="m-2">{{league_team}}</p>
-                <a href="/teams/delete-team/{{id}}" class="btn btn-danger">Delete</a>
-                <a href="/teams/edit-team/{{id}}" class="btn btn-secondary">Edit</a>
-               
-            </div>
+      <div class="card-1">
+    <div class="head">
+       <div class="circle">
+        <div class="img">
+          <img src="https://phantom-marca.unidadeditorial.es/310322f379684afd3c63dffff23f81ce/resize/1320/f/jpg/assets/multimedia/imagenes/2021/04/13/16183240507790.jpg" alt="">
         </div>
-      </div>
+       </div>
+    </div>
+    <div class="description">
+      <h4>{{name_team}}</h4>
+      <h5>{{league_team}}</h5>
+
+    </div>
+    <div class="contact">
+      <a href="/teams/delete-team/{{id}}">DELETE</a>
+      <a href="/teams/edit-team/{{id}}">EDIT</a>
+    </div>
+  </div>
       {{else}}
-      <div class="col-md-4 mx-auto">
-        <div class="card card-body text-center">
-          <p>There are not links save yet.</p>
-          <a href="/teams/add-team">Create One!</a>
-        </div>
+      <div class="agregar">
+        <a href="/teams/add-team">AGREGAR EQUIPO</a>
       </div>
     {{/each}}
     </div>

@@ -1,31 +1,38 @@
-<div class="container p-4">
-  <center><h3>LIGA BARRIAL</h3>
-    <div class="row">
-        
+
+  <link rel="stylesheet" href="/css/list.css">
+  
+  <center><h3>SOCIAL-SOCCER</h3></center>
+
+  
+   
     {{#each leagueBarrels}}
-      <div class="col-md-3">
-        <div class="card text-center">
-            <div class="card-body">
-               
-                <h3 class="card text-uppercase" style="color: blue;">
-                    {{league_barrels}}
-                </h3>
-                <p class="m-2">{{name_league_barrels}}</p>
-                <p class="m-2">{{location_league_barrels}}</p>
-                <p class="m-2">{{type_league_barrels}}</p>
-                <a href="/leagueBarrels/delete-leagueBarrel/{{id}}" class="btn btn-danger">Delete</a>
-                <a href="/leagueBarrels/edit-leagueBarrel/{{id}}" class="btn btn-secondary">Edit</a>
-               
-            </div>
+      <div class="card-1">
+    <div class="head">
+       <div class="circle">
+        <div class="img">
+          <img src="https://guayllabamba.sadcaf.com/imagenes/logo.png" alt="">
         </div>
-      </div>
+       </div>
+    </div>
+    <div class="description">
+      <h4>{{league_barrels}}</h4>
+      <h5>{{name_league_barrels}}</h5>
+      <h5>{{location_league_barrels}}</h5>
+
+      <p>{{type_league_barrels}}</p>
+
+    </div>
+    <div class="contact">
+      <a href="/leagueBarrels/delete-leagueBarrel/{{id}}">DELETE</a>
+      <a href="/leagueBarrels/edit-leagueBarrel/{{id}}">EDIT</a>
+    </div>
+  </div>
       {{else}}
-      <div class="col-md-4 mx-auto">
-        <div class="card card-body text-center">
-          <p>There are not links save yet.</p>
-          <a href="/leagueBarrels/add-leagueBarrel">Create One!</a>
-        </div>
+      <div class="agregar">
+        <a href="/leagueBarrels/add-leagueBarrel">AGREGAR LIGA BARRIAL</a>
       </div>
     {{/each}}
     </div>
 </div>
+</body>
+</html>

@@ -1,30 +1,17 @@
-<div class="container p-4">
-    <div class="row">
-    <div class="col-md-4 mx-auto">
-      <div class="card ">
-       <div class="card-body">
-        <form action="/matches/post-match" method="POST">
-           <div class="form-group">
-            <label for="nombre">LUGAR:</label>
-             <input type="text" class="form-control" name="place_Match" placeholder="Place Match" autofocus>
-           </div>
-           <div class="form-group">
-            <label for="equipo">HORA:</label>
-            <input type="time" class="form-control" name="match_time" placeholder="match time" autofocus>
-           </div>
-           <div class="form-group">
-            <label for="edad">FECHA:</label>
-           <input type="date" class="form-control" name="Date_match" placeholder="Date match" autofocus>
-           </div>
-           
-            <button class="btn btn-success btn-block">
-              save
-            </button>
-           </div>
-        </form>
-       </div>
-      </div>
-    </div>
+
+  <link rel="stylesheet" href="/css/dt.css">
+
+  
+  <form action="/matches/post-match" method="POST">
+  <div class="form-body">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68CuqzLnHbC41jV1avulfURGLcOXIYcEm2Q&usqp=CAU" alt="user-login">
+     <p class="text">PARTIDO</p>
+     <form class="login-form">
+      <input type="text" class="form-control" name="place_Match" placeholder="Lugar Partido" autofocus>
+      <input type="time" class="form-control" name="match_time" placeholder="Hora del Partido" autofocus>
+      <input type="date" class="form-control" name="Date_match" placeholder="Fecha del Partido" autofocus>
+      
+      <button>AGREGAR</button>
+      </form>
+     </form>
   </div>
-   
-</div>

@@ -1,28 +1,32 @@
-<div class="container p-4">
-  <center><h3>CAMPO</h3>
-    <div class="row">
-        
-    {{#each camp}}
-      <div class="col-md-3">
-        <div class="card text-center">
-            <div class="card-body">
-               
-                <h3 class="card text-uppercase" style="color: blue;">
-                    {{camp_number}}
-                </h3>
 
-                <a href="/camps/delete-camp/{{id}}" class="btn btn-danger">Delete</a>
-                <a href="/camps/edit-camp/{{id}}" class="btn btn-secondary">Edit</a>
-               
-            </div>
+  <link rel="stylesheet" href="/css/list.css">
+
+  <center><h3>SOCIAL-SOCCER</h3></center>
+
+  
+   
+    {{#each camp}}
+      <div class="card-1">
+    <div class="head">
+       <div class="circle">
+        <div class="img">
+          <img src="https://cdn2.civitatis.com/espana/barcelona/guia/camp-nou.jpg" alt="">
         </div>
-      </div>
+       </div>
+    </div>
+    <div class="description">
+      <h4>numero de campo</h4>
+      <h4>{{camp_number}}</h4>
+      
+    </div>
+    <div class="contact">
+      <a href="/camps/delete-camp/{{id}}">DELETE</a>
+      <a href="/camps/edit-camp/{{id}}">EDIT</a>
+    </div>
+  </div>
       {{else}}
-      <div class="col-md-4 mx-auto">
-        <div class="card card-body text-center">
-          <p>There are not links save yet.</p>
-          <a href="/camps/add-camp">Create One!</a>
-        </div>
+      <div class="agregar">
+        <a href="/camps/add-camp">AGREGAR CAMPO</a>
       </div>
     {{/each}}
     </div>

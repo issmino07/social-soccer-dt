@@ -1,23 +1,14 @@
-<div class="container p-4">
-    <div class="row">
-    <div class="col-md-4 mx-auto">
-      <div class="card ">
-       <div class="card-body">
-        <form action="/camps/post-camp" method="POST">
-           <div class="form-group">
-            <label for="N° Campo">N° CAMPO:</label>
-             <input type="number" class="form-control" name="camp_number" placeholder="Numero de Campo" autofocus>
-           </div>
-           
-           
-            <button class="btn btn-success btn-block">
-              save
-            </button>
-           </div>
-        </form>
-       </div>
-      </div>
-    </div>
+
+  <link rel="stylesheet" href="/css/dt.css">
+
+  <form action="/camps/post-camp" method="POST">
+  <div class="form-body">
+     <img src="https://cdn2.civitatis.com/espana/barcelona/guia/camp-nou.jpg" alt="user-login">
+     <p class="text">CAMPO</p>
+     <form class="login-form">
+      <input type="number" class="form-control" name="camp_number" placeholder="Numero De Campo" autofocus>
+  
+      <button>AGREGAR</button>
+      </form>
+     </form>
   </div>
-   
-</div>
